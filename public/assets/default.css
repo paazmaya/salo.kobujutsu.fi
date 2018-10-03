@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-html, body, [role="main"] {
+html, body, [role="main"], h1 {
   margin: 0;
   padding: 0;
 }
@@ -16,42 +16,18 @@ html {
   line-height: 1.4;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-display: swap;
-  min-width: 18em;
-  background-color: #EFEBE6;
+  font-variant-caps: small-caps;
+  background-color: rgb(251, 247, 242);
   overflow-wrap: break-word;
+  min-width: 20rem; /* 320px */
 }
 
 body {
-  background-color: white;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 30rem;
 }
 
-a, a:visited {
-  color: #2f2926;
-}
-
-h2 {
-  border-bottom: 2px solid #EFEBE6;
-  outline: none;
-}
-
-h2 a {
-  position: relative;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-  outline: none;
-}
-
-h2 a:hover::after {
-  content: '#';
-  display: block;
-  position: absolute;
-  color: #2f2926;
-  top: 0;
-  right: -1.2em;
-  width: 1em;
-  height: 1em;
-}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -68,10 +44,28 @@ svg {
   vertical-align: middle;
 }
 
-ul {
-  list-style: circle;
-  padding-left: 1.5em;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-li {
-  margin-bottom: 0.5em;
+header img {
+  margin-right: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 96px;
+          flex: 0 0 96px;
+  height: 96px;
+}
+
+@media screen and (max-width: 34rem) {
+  body {
+    width: 100%;
+    padding: 1rem;
+  }
+  header img {
+    margin-right: 1rem;
+  }
 }
