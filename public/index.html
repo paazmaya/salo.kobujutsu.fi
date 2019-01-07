@@ -72,7 +72,7 @@
       // Otherwise, we need to ask the user for permission
       else if (Notification.permission !== "denied") {
         Notification.requestPermission().then(function (permission) {
-
+          console.log(permission);
         });
       }
     }
