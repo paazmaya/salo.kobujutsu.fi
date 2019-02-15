@@ -57,20 +57,68 @@
     </footer>
 
     <script>
+    var kataList = [
+      'Maezato no tekko',
+      'Naifanchin Sandan',
+      'Shuji no kon sho',
+      'Rohai shodan',
+      'Jion',
+      'Soeishi no kon sho',
+      'Jitte',
+      'Passai Dai',
+      'Chinto',
+      'Shiho Kushanku',
+      'Kunshanku sho',
+      'Seienchin',
+      'Pinan Yondan',
+      'Kanigawa no tinbe',
+      'Chatanyara no sai',
+      'Kunshanku dai',
+      'Pinan Godan',
+      'Naifanchin Nidan',
+      'Saifa',
+      'Sakugawa no kon sho',
+      'Shoto no Seishan',
+      'Passai sho',
+      'Pinan Nidan',
+      'Sueyoshi no kon',
+      'Hamahiga no tonfa',
+      'Tsukenshitahaku no sai',
+      'Shuji no kon dai',
+      'Itosu no wanshu',
+      'Tozan no kama',
+      'Pinan Sandan',
+      'Naha no seishan',
+      'Hamahiga no sai',
+      'Shoto no wanshu',
+      'Chinte',
+      'Sakugawa no kon dai',
+      'Sanchin',
+      'Seipai',
+      'Soeishi no kon dai',
+      'Tawata no sai',
+      'Tensho',
+      'Jiin',
+      'Naifanchin Shodan',
+      'Pinan Shodan',
+      'Nunchaku renshuu kata sho'
+    ];
+
     // Let's check if the browser supports notifications
-    if ("Notification" in window) {
+    if ('Notification' in window) {
       // Let's check whether notification permissions have already been granted
-      if (Notification.permission === "granted") {
+      if (Notification.permission === 'granted') {
         // If it's okay let's create a notification
-          var notification = new Notification("Hello there!", {
-            lang: 'fi',
-            body: 'Whats up today?',
-            icon: '/icons/icon-96x96.png'
-          });
+        var kataName = kataList[Math.round(Math.random() * (kataList.length - 1))];
+        var notification = new Notification('Muista harjoitella!', {
+          lang: 'fi',
+          body: 'Tänään ohjelmassa kata nimeltä "' + kataName + '"',
+          icon: '/icons/icon-96x96.png'
+        });
       }
 
       // Otherwise, we need to ask the user for permission
-      else if (Notification.permission !== "denied") {
+      else if (Notification.permission !== 'denied') {
         Notification.requestPermission().then(function (permission) {
           console.log(permission);
         });
