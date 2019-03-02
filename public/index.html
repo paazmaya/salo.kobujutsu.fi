@@ -110,9 +110,9 @@
       if (Notification.permission === 'granted') {
         // If it's okay let's create a notification
         var kataName = kataList[Math.round(Math.random() * (kataList.length - 1))];
-        var notification = new Notification('Muista harjoitella!', {
+        var notification = new Notification('Päivän kata', {
           lang: 'fi',
-          body: 'Tänään ohjelmassa kata nimeltä "' + kataName + '"',
+          body: kataName,
           icon: '/icons/icon-96x96.png'
         });
       }
