@@ -13,7 +13,7 @@ the certificates for it are provided for free by [Let's Encrypt](https://letsenc
 ## Cross browser supported styling
 
 CSS should be passed through [online Autoprefixer at `autoprefixer.github.io`](https://autoprefixer.github.io/).
-Using there the option `"last 4 version"`.
+Using there the option `"last 4 version"`. This will add few cross browser support related properties, which should be committed in this repository.
 
 ## License
 
