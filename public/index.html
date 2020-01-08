@@ -70,83 +70,90 @@
       </ul>
       <p>Harjoitusmaksut voi maksaa tilille (FI62 3939 0054 3946 71), Mobilepay:llä, tai käteisellä paikan päällä.
         Huolehdithan maksuista etukäteen ja kausimaksut mielellään suoraan tilille.</p>
-      <p>Lisätietoja ja ilmoittautumiset Jukka Paasoselle osoitteeseen jukka.paasonen@kobujutsu.fi.</p>
+      <p id="sahkoposti">Lisätietoja ja ilmoittautumiset Jukka Paasoselle osoitteeseen jukka.paasonen [appappaapa] kobujutsu.fi.</p>
+      <h3>Harjoitusohjelma voi näyttää esimerkiksi tältä</h3>
+      <p>Harjoittelijan nimi: Jukka Paasonen</p>
+
+      <table>
+        <tbody>
+          <tr>
+            <th scope="col"> Päivämäärä </th>
+            <th scope="col"> Bo </th>
+            <th scope="col"> Sai/Tonfa/Kama </th>
+            <th scope="col"> Nunchaku/Surujin/Tinbe </th>
+          </tr>
+          <tr>
+            <td scope="row"> 18.1.2020 </td>
+            <td> Shuji dai </td>
+            <td> Chatanyara no sai </td>
+            <td> Nunchaku sho </td>
+          </tr>
+          <tr>
+            <td scope="row"> 1.2.2020 </td>
+            <td> Sakugawa dai </td>
+            <td> Yaraguwa no tonfa </td>
+            <td> Surujin </td>
+          </tr>
+          <tr>
+            <td scope="row"> 15.2.2020 </td>
+            <td> Soeishi dai </td>
+            <td> Kanigawa no kama sho </td>
+            <td> Kanigawa no tinbe </td>
+          </tr>
+          <tr>
+            <td scope="row"> 29.2.2020 </td>
+            <td> Shirotaru dai </td>
+            <td> Yakaa no sai </td>
+            <td> Nunchaku dai </td>
+          </tr>
+          <tr>
+            <td scope="row"> 14.3.2020 </td>
+            <td> Sueyoshi </td>
+            <td> Hamahiga no tonfa </td>
+            <td> Surujin </td>
+          </tr>
+          <tr>
+            <td scope="row"> 28.3.2020 </td>
+            <td> Chatanyara </td>
+            <td> Tozan no kama </td>
+            <td> Kanigawa no tinbe </td>
+          </tr>
+          <tr>
+            <td scope="row"> 11.4.2020 </td>
+            <td> Yonegawa </td>
+            <td> Tawata no sai </td>
+            <td> Nunchaku sho </td>
+          </tr>
+          <tr>
+            <td scope="row"> 25.4.2020 </td>
+            <td> Shuji koshiki </td>
+            <td> Kanigawa no kama dai </td>
+            <td> Surujin </td>
+          </tr>
+          <tr>
+            <td scope="row"> 9.5.2020 </td>
+            <td> Sakugawa chu </td>
+            <td> Hamahiga no sai </td>
+            <td> Kanigawa no tinbe </td>
+          </tr>
+          <tr>
+            <td scope="row"> 23.5.2020 </td>
+            <td> Soeishi sho </td>
+            <td> Jigen no manjisai </td>
+            <td> Nunchaku dai </td>
+          </tr>
+        </tbody>
+      </table>
+
     </section>
     <footer>
       <p>&copy; Salon Yuishinkai ry (Y-tunnus: 3082703-3)</p>
     </footer>
 
-
     <script>
-    var kataList = [
-      'Maezato no tekko',
-      'Naifanchin Sandan',
-      'Shuji no kon sho',
-      'Rohai shodan',
-      'Jion',
-      'Soeishi no kon sho',
-      'Jitte',
-      'Passai Dai',
-      'Chinto',
-      'Shiho Kushanku',
-      'Kunshanku sho',
-      'Seienchin',
-      'Pinan Yondan',
-      'Kanigawa no tinbe',
-      'Chatanyara no sai',
-      'Kunshanku dai',
-      'Pinan Godan',
-      'Naifanchin Nidan',
-      'Saifa',
-      'Sakugawa no kon sho',
-      'Shoto no Seishan',
-      'Passai sho',
-      'Pinan Nidan',
-      'Sueyoshi no kon',
-      'Hamahiga no tonfa',
-      'Tsukenshitahaku no sai',
-      'Shuji no kon dai',
-      'Itosu no wanshu',
-      'Tozan no kama',
-      'Pinan Sandan',
-      'Naha no seishan',
-      'Hamahiga no sai',
-      'Shoto no wanshu',
-      'Chinte',
-      'Sakugawa no kon dai',
-      'Sanchin',
-      'Seipai',
-      'Soeishi no kon dai',
-      'Tawata no sai',
-      'Tensho',
-      'Jiin',
-      'Naifanchin Shodan',
-      'Pinan Shodan',
-      'Nunchaku renshuu kata sho'
-    ];
-
-    // Let's check if the browser supports notifications
-    if ('Notification' in window) {
-      // Let's check whether notification permissions have already been granted
-      if (Notification.permission === 'granted') {
-        // If it's okay let's create a notification
-        var kataName = kataList[Math.round(Math.random() * (kataList.length - 1))];
-        var notification = new Notification('Päivän kata', {
-          lang: 'fi',
-          body: kataName,
-          icon: '/icons/icon-96x96.png'
-        });
-      }
-      /*
-      // Otherwise, we need to ask the user for permission
-      else if (Notification.permission !== 'denied') {
-        Notification.requestPermission().then(function (permission) {
-          console.log(permission);
-        });
-      }
-      */
-    }
-
+      var p = document.querySelector('#sahkoposti');
+      var inner = p.innerText;
+      p.innerText = inner.replace(' [appappaapa] ', '@');
     </script>
   </body>
 </html>

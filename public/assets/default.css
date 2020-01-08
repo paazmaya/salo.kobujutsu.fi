@@ -9,7 +9,7 @@
           box-sizing: border-box;
 }
 
-html, body, [role="main"], h1 {
+html, body, [role="main"], h1, h2, h3, table {
   margin: 0;
   padding: 0;
 }
@@ -26,10 +26,25 @@ html {
   min-width: 20rem; /* 320px */
 }
 
+table {
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  background-color: rgb(204, 204, 204);
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color: white;
     background-color: rgb(25, 24, 24);
+  }
+  table {
+    background-color: rgb(54, 54, 54);
   }
 }
 
