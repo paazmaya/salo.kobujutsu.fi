@@ -36,6 +36,7 @@ table {
 th {
   font-weight: bold;
   text-align: left;
+  overflow-wrap: anywhere;
 }
 
 @media (prefers-color-scheme: dark) {
