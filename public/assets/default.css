@@ -9,7 +9,7 @@
           box-sizing: border-box;
 }
 
-html, body, [role="main"], h1, h2, h3, table {
+html, body, section, h1, h2, h3, table {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +24,20 @@ html {
   background-color: rgb(251, 247, 242);
   overflow-wrap: break-word;
   min-width: 20rem; /* 320px */
+}
+
+body {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+section {
+  padding: 0.5rem 0;
 }
 
 table {
@@ -47,12 +61,6 @@ th {
   table {
     background-color: rgb(54, 54, 54);
   }
-}
-
-body {
-  width: 100%;
-  padding: 1rem;
-  margin: 0 auto;
 }
 
 ::-moz-selection {
