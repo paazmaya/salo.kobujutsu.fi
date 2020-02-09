@@ -10,6 +10,10 @@ The web site is hosted at [Netlify](https://www.netlify.com/), for free since cr
 The site is configured to only allow secured connections (via `https`) and
 the certificates for it are provided for free by [Let's Encrypt](https://letsencrypt.org/).
 
+## Logo
+
+The logo for the martial art club is ["Oak Leaf" by Kakha Kakhadzen](https://dribbble.com/shots/3678848-Oak-Leaf).
+
 ## Cross browser supported styling
 
 CSS should be passed through [online Autoprefixer at `autoprefixer.github.io`](https://autoprefixer.github.io/).
