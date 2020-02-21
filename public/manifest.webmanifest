@@ -9,42 +9,42 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/icons/icon-32x32.png",
+      "src": "/icons/salon-yuishinkai-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-72x72.png",
+      "src": "/icons/salon-yuishinkai-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-96x96.png",
+      "src": "/icons/salon-yuishinkai-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-120x120.png",
+      "src": "/icons/salon-yuishinkai-120x120.png",
       "sizes": "120x120",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-144x144.png",
+      "src": "/icons/salon-yuishinkai-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-196x196.png",
+      "src": "/icons/salon-yuishinkai-196x196.png",
       "sizes": "196x196",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-310x150.png",
+      "src": "/icons/salon-yuishinkai-310x150.png",
       "sizes": "310x150",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-310x310.png",
+      "src": "/icons/salon-yuishinkai-310x310.png",
       "sizes": "310x310",
       "type": "image/png"
     }

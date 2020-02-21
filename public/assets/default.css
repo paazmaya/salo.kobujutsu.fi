@@ -14,16 +14,19 @@ html, body, section, h1, h2, h3, table {
   padding: 0;
 }
 
-html {
+html, body {
   color: black;
+  background-color: rgb(251, 247, 242);
+  min-width: 20rem; /* 320px */
+}
+
+html {
   font-size: 100%;
   line-height: 1.4;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-display: swap;
   font-variant-caps: small-caps;
-  background-color: rgb(251, 247, 242);
   overflow-wrap: break-word;
-  min-width: 20rem; /* 320px */
 }
 
 body {
@@ -58,7 +61,7 @@ th[scope="row"] {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  html, body {
     color: white;
     background-color: rgb(25, 24, 24);
   }
