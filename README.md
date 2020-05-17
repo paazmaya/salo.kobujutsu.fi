@@ -3,6 +3,7 @@
 > Web site for the "Salon Yuishinkai ry", a martial club in Salo, Finland.
 
 ![Visual Regression Status](https://api.ghostinspector.com/v1/suites/5bb21eb9d672630e215db1fa/status-badge)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=paazmaya_salo.kobujutsu.fi&metric=code_smells)](https://sonarcloud.io/dashboard?id=paazmaya_salo.kobujutsu.fi)
 
 The web site is available at `salo.kobujutsu.fi`, in which it is deployed immediately when something is pushed to this GitHub repository.
 The web site is hosted at [Netlify](https://www.netlify.com/), for free since creating open source stuff is great.
