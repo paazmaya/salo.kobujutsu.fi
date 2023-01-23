@@ -16,7 +16,7 @@ html, body, section, h1, h2, h3, table {
 
 html, body {
   color: black;
-  background-color: rgb(251, 247, 242);
+  background-color: rgb(240, 240, 240);
   min-width: 20rem; /* 320px */
 }
 
@@ -63,7 +63,7 @@ th[scope="row"] {
 @media (prefers-color-scheme: dark) {
   html, body {
     color: white;
-    background-color: rgb(25, 24, 24);
+    background-color: rgb(43, 43, 43);
   }
   table {
     background-color: rgb(54, 54, 54);
