@@ -6,33 +6,94 @@ ID = "salon-yuishinkai"
 [context.production]
   publish = "public"
 
+# Global headers for all files
 [[headers]]
   for = "/*"
   [headers.values]
-    Accept-Ranges = "bytes"
-    Cache-Control = "max-age=31536000, immutable"
-    Server = "Kashiyama Dojo Server"
+    # Security headers that improve performance
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Timing-Allow-Origin = "*"
-
-[[headers]]
-  for = "/assets/default.css"
-  [headers.values]
     X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Performance headers
+    Accept-Ranges = "bytes"
+    Server = "Kashiyama Dojo Server"
+    Timing-Allow-Origin = "*"
+    
+    # Compression and encoding
+    Vary = "Accept-Encoding"
 
+# Main HTML page - short cache for content updates
 [[headers]]
   for = "/"
   [headers.values]
-    Cache-Control = "max-age=179"
-    X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
+    Cache-Control = "public, max-age=300, s-maxage=300"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+
+# Static assets (CSS, JS) - longer cache with versioning strategy
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "text/css; charset=utf-8"
+
+# Images - long cache, they rarely change
+[[headers]]
+  for = "/assets/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/png"
 
 [[headers]]
-  for = "/browserconfig.xml"
+  for = "/assets/*.jpg"
   [headers.values]
-    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/jpeg"
 
+[[headers]]
+  for = "/assets/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "/assets/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/webp"
+
+# PDFs - medium cache duration
+[[headers]]
+  for = "/assets/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+    Content-Type = "application/pdf"
+
+# Icons - very long cache, they almost never change
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Favicon - long cache
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/x-icon"
+
+# Web app manifest - medium cache
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
+    Cache-Control = "public, max-age=86400"
     Content-Type = "application/manifest+json; charset=utf-8"
+
+# Browser config - medium cache
+[[headers]]
+  for = "/browserconfig.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/xml; charset=utf-8"
