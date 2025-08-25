@@ -40,3 +40,10 @@ jspm_packages
 
 # mac
 .DS_Store
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+*-actual.png
+*-diff.png

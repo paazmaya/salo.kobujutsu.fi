@@ -11,6 +11,35 @@ The web site is hosted at [Netlify](https://www.netlify.com/), for free since cr
 The site is configured to only allow secured connections (via `https`) and
 the certificates for it are provided for free by [Let's Encrypt](https://letsencrypt.org/).
 
+## Visual Regression Testing
+
+This project includes comprehensive visual regression testing using Playwright with Docker. The tests run automatically on every push and pull request, checking the site across Chromium, Firefox, and WebKit browsers.
+
+**Key features:**
+- 🎭 **Multi-browser testing**: Chromium, Firefox, WebKit
+- 🐳 **Docker-based CI**: Consistent testing environment
+- 📱 **Responsive testing**: Multiple viewport sizes
+- ♿ **Accessibility checks**: Color contrast, keyboard navigation
+- 📊 **Performance monitoring**: Load times, asset verification
+- 📸 **Visual comparisons**: Pixel-perfect regression detection
+
+For detailed information about the visual testing setup, see [VISUAL_TESTING.md](VISUAL_TESTING.md).
+
+### Quick Start
+```bash
+# Setup testing environment
+npm run setup
+
+# Run all visual regression tests
+npm test
+
+# Update visual baselines
+npm run test:update
+
+# View test results
+npm run report
+```
+
 ## Logo
 
 The logo for the martial art club is ["Oak Leaf" by Kakha Kakhadzen](https://dribbble.com/shots/3678848-Oak-Leaf).

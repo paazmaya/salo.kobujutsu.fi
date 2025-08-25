@@ -1,0 +1,15 @@
+{
+  "name": "salo-kobujutsu-visual-tests",
+  "version": "1.0.0",
+  "description": "Visual regression tests for salo.kobujutsu.fi",
+  "scripts": {
+    "test": "playwright test",
+    "serve": "http-server public -p 3000"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "http-server": "^14.1.1",
+    "wait-on": "^8.0.4"
+  }
+}
