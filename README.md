@@ -16,6 +16,7 @@ the certificates for it are provided for free by [Let's Encrypt](https://letsenc
 This project includes comprehensive visual regression testing using Playwright with Docker. The tests run automatically on every push and pull request, checking the site across Chromium, Firefox, and WebKit browsers.
 
 **Key features:**
+
 - 🎭 **Multi-browser testing**: Chromium, Firefox, WebKit
 - 🐳 **Docker-based CI**: Consistent testing environment
 - 📱 **Responsive testing**: Multiple viewport sizes
@@ -26,6 +27,7 @@ This project includes comprehensive visual regression testing using Playwright w
 For detailed information about the visual testing setup, see [VISUAL_TESTING.md](VISUAL_TESTING.md).
 
 ### Quick Start
+
 ```bash
 # Setup testing environment
 npm run setup
