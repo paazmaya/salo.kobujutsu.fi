@@ -2,9 +2,9 @@ name: Visual Regression Tests
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [main]
   pull_request:
-    branches: [ master, main ]
+    branches: [main]
   schedule:
     # Run daily at 2 AM UTC to catch external changes
     - cron: '0 2 * * *'
